@@ -1,0 +1,38 @@
+[gd_scene load_steps=2 format=3 uid="uid://c1okk356xxxp7"]
+
+[ext_resource type="PackedScene" uid="uid://c5c1wc3iag87f" path="res://enemyObjectTemplate.tscn" id="1_ffsmo"]
+
+[node name="Main_Scene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Horizon" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Enemies" type="HBoxContainer" parent="Horizon"]
+layout_mode = 2
+size_flags_vertical = 10
+alignment = 1
+
+[node name="Enemy" parent="Horizon/Enemies" instance=ExtResource("1_ffsmo")]
+layout_mode = 2
+
+[node name="Enemy2" parent="Horizon/Enemies" instance=ExtResource("1_ffsmo")]
+layout_mode = 2
+
+[node name="Enemy3" parent="Horizon/Enemies" instance=ExtResource("1_ffsmo")]
+layout_mode = 2
+
+[node name="Hand" type="HBoxContainer" parent="Horizon"]
+layout_mode = 2
+size_flags_vertical = 10
+alignment = 1

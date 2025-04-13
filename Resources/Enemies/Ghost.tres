@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="EnemyResource" load_steps=3 format=3 uid="uid://bhposnaxigm82"]
+
+[ext_resource type="Texture2D" uid="uid://dtwvjc2hd7my6" path="res://icon.svg" id="1_6h2cg"]
+[ext_resource type="Script" uid="uid://df1fcipwxjl1u" path="res://Scripts/Resources/EnemyTemplate.gd" id="1_6x2ys"]
+
+[resource]
+script = ExtResource("1_6x2ys")
+name = "Ghost"
+health = 2
+damage = 1
+weakness = "Heal"
+image = ExtResource("1_6h2cg")
+metadata/_custom_type_script = "uid://df1fcipwxjl1u"

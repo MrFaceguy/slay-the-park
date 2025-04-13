@@ -1,0 +1,35 @@
+[gd_scene load_steps=3 format=3 uid="uid://c5c1wc3iag87f"]
+
+[ext_resource type="Script" uid="uid://xm14k74qv1qq" path="res://enemyScript.gd" id="1_21qtt"]
+[ext_resource type="Resource" uid="uid://bhposnaxigm82" path="res://Resources/Enemies/Ghost.tres" id="2_pt04c"]
+
+[node name="Enemy" type="VBoxContainer"]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_21qtt")
+enemyInfo = ExtResource("2_pt04c")
+
+[node name="Name_Label" type="Label" parent="."]
+layout_mode = 2
+text = "Ghost"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ProgressBar" type="ProgressBar" parent="Name_Label"]
+custom_minimum_size = Vector2(100, 20)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -10.0
+offset_right = 50.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+show_percentage = false
+
+[node name="Enemy_Image" type="TextureRect" parent="."]
+layout_mode = 2
