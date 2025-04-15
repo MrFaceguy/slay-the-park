@@ -17,10 +17,11 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+alignment = 1
 
 [node name="Enemies" type="HBoxContainer" parent="Horizon"]
 layout_mode = 2
-size_flags_vertical = 10
+size_flags_vertical = 8
 alignment = 1
 
 [node name="Enemy" parent="Horizon/Enemies" instance=ExtResource("1_ffsmo")]
@@ -31,8 +32,3 @@ layout_mode = 2
 
 [node name="Enemy3" parent="Horizon/Enemies" instance=ExtResource("1_ffsmo")]
 layout_mode = 2
-
-[node name="Hand" type="HBoxContainer" parent="Horizon"]
-layout_mode = 2
-size_flags_vertical = 10
-alignment = 1

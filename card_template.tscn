@@ -2,11 +2,12 @@
 
 [ext_resource type="Texture2D" uid="uid://dtwvjc2hd7my6" path="res://icon.svg" id="1_aec3p"]
 
-[node name="Panel" type="Panel"]
-offset_right = 400.0
-offset_bottom = 600.0
+[node name="Card" type="Control"]
+layout_mode = 3
+anchor_right = 0.2
+anchor_bottom = 0.5
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="Panel" type="Panel" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -14,10 +15,23 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer"]
 layout_mode = 2
 
-[node name="Name" type="Label" parent="VBoxContainer/HBoxContainer2"]
+[node name="HBoxContainer2" type="HBoxContainer" parent="Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Name" type="Label" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer2"]
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -25,7 +39,7 @@ text = "Name"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Cost" type="Label" parent="VBoxContainer/HBoxContainer2"]
+[node name="Cost" type="Label" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer2"]
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -33,17 +47,18 @@ text = "Cost"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="TextureRect" type="TextureRect" parent="VBoxContainer"]
-custom_minimum_size = Vector2(300, 300)
+[node name="TextureRect" type="TextureRect" parent="Panel/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 texture = ExtResource("1_aec3p")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/MarginContainer/VBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 
-[node name="Type" type="Label" parent="VBoxContainer/HBoxContainer"]
+[node name="Type" type="Label" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -51,7 +66,7 @@ text = "Type of card"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Subtype" type="Label" parent="VBoxContainer/HBoxContainer"]
+[node name="Subtype" type="Label" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -59,11 +74,9 @@ text = "Subtype of Card"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Description" type="Label" parent="VBoxContainer"]
-custom_minimum_size = Vector2(300, 150)
+[node name="Description" type="Label" parent="Panel/MarginContainer/VBoxContainer"]
 layout_mode = 2
-size_flags_horizontal = 4
+size_flags_vertical = 1
 text = "Description goes here."
 horizontal_alignment = 1
 vertical_alignment = 1
-autowrap_mode = 2
